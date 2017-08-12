@@ -1,0 +1,20 @@
+{
+  "name": "api-wrapper-remote-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ."
+  },
+  "keywords": [],
+  "author": "Erik Palla <hello@erikpalla.com> (http://erikpalla.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "fetch-mock": "^5.12.2",
+    "mocha": "^3.5.0"
+  }
+}
