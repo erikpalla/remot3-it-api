@@ -4,5 +4,5 @@ module.exports = {
   USER_LOGIN_ENDPOINT: '/user/login',
   DEVICE_LIST_ALL_ENDPOINT: '/device/list/all',
   DEVICE_SEND_ENDPOINT: '/device/send',
-  DEVICE_CONNECT_ENDPOINT: '/device/connect'
-}
+  DEVICE_CONNECT_ENDPOINT: '/device/connect',
+};
