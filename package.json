@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ."
+    "test": "export NODE_ENV=test && mocha $(find -name *.test.js)",
+    "test:w": "npm t -- --watch"
   },
   "keywords": [],
   "author": "Erik Palla <hello@erikpalla.com> (http://erikpalla.com/)",
