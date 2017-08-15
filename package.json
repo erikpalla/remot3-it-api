@@ -2,9 +2,9 @@
   "name": "api-wrapper-remote-it",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "export NODE_ENV=test && mocha $(find -name *.test.js)",
+    "test": "NODE_ENV=test && mocha $(find lib -name *.test.js)",
     "test:w": "npm t -- --watch"
   },
   "keywords": [],
