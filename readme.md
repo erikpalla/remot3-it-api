@@ -1,12 +1,9 @@
 # JavaScript wrapper for Remot3.it API
-- for browser and node.js
+- supported platform: node.js
 
 ## Instalation
 - via npm: `npm i remot3-it-api`
-- via cdn: `https://unpkg.com/remot3-it-api@latest/dist/index.umd.min.js`
-- via github: 
-  - `cd remot3-it-api && npm run build`, 
-  - then use in your script by `const remot3itApi = require('<relative-path-to-cloned-repo>')` 
+- via github: `cd remot3-it-api && npm run build`  
 
 ## Usage:
 `const { logUser, deviceListAll, deviceSend, deviceConnect } = require('remot3-it-api');`
