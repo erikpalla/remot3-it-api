@@ -1,6 +1,6 @@
 {
   "name": "remot3-it-api",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "JavaScript wrapper for Remot3.it API",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "build": "npm run build:main && npm run build:umd && npm run build:umd.min",
     "build:main": "babel --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
-    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "Remot3.it",
