@@ -1,5 +1,5 @@
-const FetchInterface = require('./fetch-interface');
-const {
+import FetchInterface from './fetch-interface';
+import {
   HOST_IP_URL,
   API_BASE_URL,
   USER_LOGIN_ENDPOINT,
@@ -12,7 +12,7 @@ const {
   DEVICE_SEND_ENDPOINT_MSG_NO_UID_OR_CMND,
   DEVICE_CONNECT_ENDPOINT,
   DEVICE_CONNECT_ENDPOINT_MSG_NO_UID,
-} = require('./constants');
+} from './constants';
 
 const api = new FetchInterface({
   baseURL: API_BASE_URL,
@@ -36,7 +36,7 @@ const ip = new FetchInterface({
  * @param {string} password - User's Weaved account password
  * @returns {{ token: string, auth_expiration: number }} - Auth token and time to token expiration 
  */
-const logUser = async (username, password) => {
+export const logUser = async (username, password) => {
   if (!username || !password) throw new Error(USER_LOGIN_ENDPOINT_MSG_NO_CREDS);
 
   try {
@@ -57,7 +57,7 @@ const logUser = async (username, password) => {
  * @returns {Object[]} with details about each devices - described in detail 
  * in documentation on http://docs.weaved.com/docs/devicelistall
  */
-const deviceListAll = async () => {
+export const deviceListAll = async () => {
   try {
     const { err, body: { status, devices, reason } } = await api.get(DEVICE_LIST_ALL_ENDPOINT);
     if (status === 'false') throw new Error(reason);
@@ -78,7 +78,7 @@ const deviceListAll = async () => {
  * @param {string} command - Command to execute on target device/deamon 
  * @returns {string} Confirmation message for sent command
  */
-const deviceSend = async (uid, command) => {
+export const deviceSend = async (uid, command) => {
   if (!uid || !command) throw new Error(DEVICE_SEND_ENDPOINT_MSG_NO_UID_OR_CMND);
   try {
     const encodedCommand = new Buffer(command).toString('base64');
@@ -99,7 +99,7 @@ const deviceSend = async (uid, command) => {
  * @returns {string} - IP address
  */
 
-const getHostIP = async () => {
+export const getHostIP = async () => {
   try {
     const { err, body } = await ip.get();
     if (err) throw err;
@@ -117,7 +117,7 @@ const getHostIP = async () => {
  * @returns {Object.<string>} - connection details described in documentation 
  * on http://docs.weaved.com/docs/deviceconnect
  */
-const deviceConnect = async (uid, wait = true) => {
+export const deviceConnect = async (uid, wait = true) => {
   if (!uid) throw new Error(DEVICE_CONNECT_ENDPOINT_MSG_NO_UID);
 
   try {
@@ -134,12 +134,4 @@ const deviceConnect = async (uid, wait = true) => {
   } catch (error) {
     throw error;
   }
-};
-
-module.exports = {
-  logUser,
-  deviceListAll,
-  deviceSend,
-  getHostIP,
-  deviceConnect,
 };

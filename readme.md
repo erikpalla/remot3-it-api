@@ -1,6 +1,14 @@
+## JavaScript wrapper for Remot3.it API
+- for enviroments: browser, node.js
+
 [Documentation for Remot3.it API](http://docs.weaved.com/docs)
 
-### Methods:
+### Instalation
+- via npm `npm i remot3-it-api`
+- via github `npm run build`
+- tests `npm t`
+
+### Usage:
 ### logUser
 - Sign in user into Remot3.it account
 - Params: username, password

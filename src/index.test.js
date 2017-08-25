@@ -1,7 +1,7 @@
-const { expect } = require('chai');
-const fetchMock = require('fetch-mock');
-const { logUser, deviceListAll, deviceSend, getHostIP, deviceConnect } = require('./index');
-const {
+import { expect } from 'chai';
+import fetchMock from 'fetch-mock';
+import { logUser, deviceListAll, deviceSend, getHostIP, deviceConnect } from '.';
+import {
   API_BASE_URL,
   HOST_IP_URL,
   USER_LOGIN_ENDPOINT,
@@ -14,7 +14,7 @@ const {
   DEVICE_SEND_ENDPOINT_MSG_NO_UID_OR_CMND,
   DEVICE_CONNECT_ENDPOINT,
   DEVICE_CONNECT_ENDPOINT_MSG_NO_UID,
-} = require('./constants');
+} from './constants';
 
 
 describe('Remot3.it API wrapper', () => {

@@ -1,7 +1,6 @@
-const FetchInterface = require('./fetch-interface');
-const { expect } = require('chai');
-const fetchMock = require('fetch-mock');
-
+import { expect } from 'chai';
+import fetchMock from 'fetch-mock';
+import FetchInterface from './fetch-interface';
 
 describe('FetchInterface', () => {
   const STATUS_INTERNAL_SERVER_ERROR = 'Internal Server Error';

@@ -1,6 +1,6 @@
-require('isomorphic-fetch');
+import 'isomorphic-fetch';
 
-class FetchInterface {
+export default class FetchInterface {
   constructor({ baseURL, headers = {}, responseType = 'json' }) {
     if (!baseURL) throw new Error('baseURL parameter is missing');
     this.baseURL = baseURL;
@@ -60,5 +60,3 @@ class FetchInterface {
     }
   }
 }
-
-module.exports = FetchInterface;
