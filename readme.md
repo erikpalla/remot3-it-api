@@ -1,5 +1,6 @@
 # JavaScript wrapper for Remot3.it API
-- supported platform: node.js
+- supported platform: node.js (from 6.11.2 if installed from npm)
+- using `build` command can be rebuilded for almost every version of node.js
 
 ## Instalation
 - via npm: `npm i remot3-it-api`
