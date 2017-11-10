@@ -26,7 +26,7 @@
 ### deviceSend
 `deviceSend(uid, command)`
 - Send a command to registered device
-- Params: device uid, command
+- Params: device uid (address), command
 - Returns: Confirmation message for sent command
 
 ### getHostIP
@@ -38,7 +38,7 @@
 ### deviceConnect
 `deviceConnect(uid)`
 - Connects to device and returns details for direct connection (VPN, SSH)
-- Params: device uid
+- Params: device uid (address)
 - Returns: connection details
 
 ## API docs:
