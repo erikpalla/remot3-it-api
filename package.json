@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erik-palla/remot3-it-api.git"
+    "url": "git+https://github.com/erikpalla/remot3-it-api.git"
   },
-  "homepage": "https://github.com/erik-palla/remot3-it-api#readme"
+  "homepage": "https://github.com/erikpalla/remot3-it-api#readme"
 }
